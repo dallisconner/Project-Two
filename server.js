@@ -9,6 +9,18 @@ var PORT = process.env.PORT || 8080;
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+app.get("/about", function(req, res) {
+  res.render("about");
+});
+
+app.get("/browse", function(req, res) {
+  res.render("browse");
+});
+
+app.get("/quiz", function(req, res) {
+  res.render("quiz");
+});
+
 app.get("/", function(req, res) {
     res.render("index");
   });
