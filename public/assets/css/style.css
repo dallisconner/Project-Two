@@ -1,3 +1,11 @@
-#content {
-    background-image: linear-gradient(grey, black);  
+h1 {
+    color: orange;
+}
+
+p {
+    color: orange;
+}
+
+.hero {
+    background-color: orange;  
 }
