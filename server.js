@@ -12,6 +12,8 @@ app.set("view engine", "handlebars");
 
 app.use(express.static(path.join(__dirname, '/public/assets')));
 
+app.use(express.static(path.join(__dirname, '/models')));
+
 app.get('/login', (req, res) => {
   // If the user already has an account send them to the home page
   if (req.user) {
@@ -33,7 +35,7 @@ app.get("/browse", function(req, res) {
 });
 
 app.get("/quiz", function(req, res) {
-  res.render("quiz");
+  res.sendFile(path.join(__dirname, './models/quiz.html'))
 });
 
 app.get("/", function(req, res) {
