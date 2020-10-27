@@ -1,3 +1,8 @@
 #content {
-    background-image: linear-gradient(grey, black);  
+  background-image: linear-gradient(grey, black);
+}
+
+#footer {
+  background-color: #cf0707;
+  padding: 25px;
 }
