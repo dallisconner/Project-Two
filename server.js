@@ -24,7 +24,7 @@ app.get('/browse', function (req, res) {
 })
 
 app.get('/quiz', function (req, res) {
-  res.sendFile(path.join(__dirname, './models/quiz.html'))
+  res.sendFile(path.join(__dirname, './public/quiz.html'))
 })
 
 app.get('/', function (req, res) {
