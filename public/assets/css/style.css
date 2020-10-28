@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-h1 {
-    color: orange;
-}
-
-p {
-    color: orange;
-}
-
-.hero {
-    background-color: orange;  
-}
-=======
 #content {
   background-image: linear-gradient(grey, black);
 }
@@ -19,4 +6,3 @@ p {
   background-color: #cf0707;
   padding: 25px;
 }
->>>>>>> 70cb1243e8d00a1177c842cc0d1d090be3f4f240
