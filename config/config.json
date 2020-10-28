@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "admin#20",
-    "database": "database_development",
+    "database": "spooky_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "admin#20",
-    "database": "database_test",
+    "database": "spooky_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
