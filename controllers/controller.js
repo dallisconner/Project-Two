@@ -12,6 +12,6 @@ module.exports = function (app) {
   })
 
   app.get('/quiz', (req, res) => {
-    res.sendFile(path.join(__dirname, '../models/quiz.html'))
+    res.sendFile(path.join(__dirname, '../public/quiz.html'))
   })
 }
