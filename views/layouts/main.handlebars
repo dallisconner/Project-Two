@@ -26,43 +26,92 @@
 			background-image: url("https://preview.redd.it/uwu5izpck7p01.jpg?width=960&crop=smart&auto=webp&s=869842b89a479e1bd6fa0d1d8551d8e1978bcb79");
 			background-position: center;
 			background-size: cover;
+			animation-name: bgAni;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
 		}
 
-		{{!-- @keyframes test {
+		@keyframes bgAni {
 			0% {
-				background-color: red;
+				background-image: url("https://preview.redd.it/uwu5izpck7p01.jpg?width=960&crop=smart&auto=webp&s=869842b89a479e1bd6fa0d1d8551d8e1978bcb79");
 			}
 
 			20% {
-				background-color: orange;
+				background-image: url("https://preview.redd.it/uwu5izpck7p01.jpg?width=960&crop=smart&auto=webp&s=869842b89a479e1bd6fa0d1d8551d8e1978bcb79");
 			}
 
-			40% {
-				background-color: white;
+			22% {
+				background-image: url("https://preview.redd.it/uwu5izpck7p01.jpg?width=960&crop=smart&auto=webp&s=869842b89a479e1bd6fa0d1d8551d8e1978bcb79");
 			}
 
-			60% {
-				background-color: black;
+			24% {
+				background-image: url("https://hddesktopwallpapers.in/wp-content/uploads/2015/09/lightning-wallpaper.jpg");
 			}
 
-			80% {
-				background-color: purple;
+			26% {
+				background-image: url("https://preview.redd.it/uwu5izpck7p01.jpg?width=960&crop=smart&auto=webp&s=869842b89a479e1bd6fa0d1d8551d8e1978bcb79");
+			}
+
+			28% {
+				background-image: url("https://hddesktopwallpapers.in/wp-content/uploads/2015/09/lightning-wallpaper.jpg");
+			}
+
+			30% {
+				background-image: url("https://preview.redd.it/uwu5izpck7p01.jpg?width=960&crop=smart&auto=webp&s=869842b89a479e1bd6fa0d1d8551d8e1978bcb79");
 			}
 
 			100% {
-				background-color: red;
+				background-image: url("https://preview.redd.it/uwu5izpck7p01.jpg?width=960&crop=smart&auto=webp&s=869842b89a479e1bd6fa0d1d8551d8e1978bcb79");
 			}
 		}
 
-		.hero {
-			background-color: orange;
-			animation-name: test;
-			animation-duration: 15s;
-			animation-iteration-count: infinite;
-		} --}}
+		@keyframes titleAni {
+			0% {
+				opacity: 0;
+			}
+
+			20% {
+				opacity: 1;
+			}
+
+			22% {
+				opacity: 0;
+			}
+
+			24% {
+				opacity: 1;
+			}
+
+			26% {
+				opacity: 0;
+			}
+
+			28% {
+				opacity: 1;
+			}
+
+			30% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+
+		.title {
+			animation-name: titleAni;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+		}
 
 		.hero {
 			background-color: transparent;
+		}
+
+		.about-panel {
+			background-color: rgba(211, 211, 211, 0.5);
 		}
 	</style>
 
