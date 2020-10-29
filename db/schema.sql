@@ -7,7 +7,7 @@ CREATE TABLE movies
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(60) NOT NULL,
-    kid_friendly BOOLEAN default FALSE,
+    all_ages BOOLEAN default FALSE,
 	PRIMARY KEY (id)
 );
 
