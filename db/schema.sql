@@ -7,7 +7,7 @@ CREATE TABLE favorites
 (
     id
         AUTO_INCREMENT
-    NUMBER,
+    int,
 username VARCHAR
     (100),
 drink
@@ -18,7 +18,9 @@ VARCHAR
     (100),
 movie_id
 VARCHAR
-    (100)
+    (100),
+    PRIMARY KEY
+    (id)
 )
 
     CREATE TABLE movies
