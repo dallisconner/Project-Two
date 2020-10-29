@@ -4,7 +4,7 @@ let Sequelize = require('sequelize')
 
 let sequelize = new Sequelize('spooky_db', 'root', '', {
   host: 'localhost',
-  port: 3306,
+  port: process.env.PORT || 3306,
   dialect: 'mysql',
   pool: {
     max: 5,
