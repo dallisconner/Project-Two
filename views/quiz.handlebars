@@ -17,18 +17,38 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
-        <li><a href="#"> <span class="glyphicon glyphicon-user"></span> User</li>
+        <li><a href="#"> <span class="glyphicon glyphicon-user"></span> User</a></li>
 
       </ul>
     </div>
   </div>
 </nav>
 
+<link href="./assets/css/quiz.css" rel="stylesheet">
+<script defer src="./js/quiz.js"></script>
+
 <div class="jumbotron">
-  <div class="container text-center">
-    <br><br><br><br>
-    <h1>Halloween Movie Night!</h1>
-    <div class="btn btn-warning btn-lg">Take Quiz</div>
-    <br><br><br><br>
-  </div>
+  <div class="row container-fluid" id="quizChallengePage">
+    <h1 id="start">Halloween Themed Quiz!</h1>
+    <p id="explanation">Show us your knowledge in Halloween lore with this short fun spooky quiz! When the background
+      turns green, then you got the question correct. If the background turns red, then you got the question incorrect.
+    </p>
+    <div id="button"></div>
+      <div class="container">
+        <div id="question-container" class="hide">
+          <div id="question">Question</div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="start-btn" class="start-btn btn">Start</button>
+          <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+      </div>
+      <a href='/'><button>Back To Main Page</button></a>
+</div>
 </div>

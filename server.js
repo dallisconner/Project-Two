@@ -25,6 +25,11 @@ app.get('/browse', function (req, res) {
 
 app.get('/quiz', function (req, res) {
   res.sendFile(path.join(__dirname, './public/quiz.html'))
+  // res.render('quiz')
+})
+
+app.get('/results', function (req, res) {
+  res.render('results')
 })
 
 app.get('/', function (req, res) {
