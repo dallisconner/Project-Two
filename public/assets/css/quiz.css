@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: Gotham Rounded,sans-serif;
+  font-family: Gotham Rounded, sans-serif;
 }
 
 :root {
@@ -38,6 +38,7 @@ body.wrong {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 2px;
+  margin-top: 30px;
 }
 
 .btn-grid {
@@ -75,6 +76,10 @@ body.wrong {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
+}
+
+.main {
+  margin: 26px;
 }
 
 .controls {
