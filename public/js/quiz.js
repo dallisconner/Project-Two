@@ -78,36 +78,37 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'Who is the main character of Friday the 13th',
+    question: 'Are you participating with kids or all adults?',
     answers: [
-      { text: 'Jason Voorhees', correct: true },
-      { text: 'Michael Myers', correct: false }
+      { text: 'Kids included', correct: true },
+      { text: 'All adults', correct: true },
+
     ]
   },
   {
-    question: 'Where is Transylvania located?',
+    question: 'What kind of candy do you prefer?',
     answers: [
-      { text: 'Romania', correct: true },
-      { text: 'Canada', correct: false },
-      { text: 'Russia', correct: false },
-      { text: 'It does not exist' , correct: false }
+      { text: 'Chocolate', correct: true },
+      { text: 'Fruity', correct: true },
+      { text: 'Sour', correct: true },
+      { text: 'I HATE candy' , correct: true }
     ]
   },
   {
-    question: 'What are Jack O Lanterns made out of?',
+    question: 'What type of scary movies do you prefer?',
     answers: [
-      { text: 'Potatoes', correct: false },
-      { text: 'Pumpkins', correct: true },
-      { text: 'Lemons', correct: false },
-      { text: 'Apples', correct: false }
+      { text: 'Psychological', correct: true },
+      { text: 'Comedic', correct: true },
+      { text: 'Slasher', correct: true },
+      { text: 'Monster', correct: true }
     ]
   },
   {
-    question: 'Freddy Krueger is a character from which movie?',
+    question: 'What kind of drinks do you want?',
     answers: [
-      { text: 'Shrek', correct: false },
-      { text: 'Nightmare on Elm Street', correct: true }
+      { text: 'Kid Friendly', correct: true },
+      { text: 'Adult Drinks', correct: true }
     ]
-  }
+  },
   
 ]
