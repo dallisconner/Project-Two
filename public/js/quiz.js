@@ -78,7 +78,7 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'Are you watching participating with kids or all adults?',
+    question: 'Are you participating with kids or all adults?',
     answers: [
       { text: 'Kids included', correct: true },
       { text: 'All adults', correct: true },
