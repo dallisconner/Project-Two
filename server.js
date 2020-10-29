@@ -10,7 +10,7 @@ let PORT = process.env.PORT || 8080
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
-// app.use(express.static(path.join(__dirname, '/public/')))
+app.use(express.static(path.join(__dirname, '/public/')))
 app.use(express.static(path.join(__dirname, '/public/assets')))
 app.use(express.static(path.join(__dirname, '/models')))
 
