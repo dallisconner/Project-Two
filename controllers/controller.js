@@ -1,5 +1,7 @@
 var path = require('path')
 
+// ROUTES ---------
+
 module.exports = function (app) {
   // gets home page
   app.get('/', (req, res) => {
