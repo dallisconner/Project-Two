@@ -20,49 +20,53 @@
             </ul>
         </div>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/browse">Browse</a></li>
+        <li><a href="/">Generate Your Night</a></li>
+        <li class="active"><a href="/quiz">Take Quiz</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
 
+        <li><a href="#"> <span class="glyphicon glyphicon-user"></span> User</a></li>
+
+      </ul>
     </div>
+  </div>
 </nav>
+<div class="main-header">
+    <div class="inner">
+      <h1 class="main-title">Have some ideas for movies? Search them up here!</h1>
+      <form class="search-form">
+        <label class="is-hidden" for="search">Search a title</label>
+        <input type="search" name="search" id="search" placeholder="Search a Title...">
 
-<div class="container-fluid bg-3 text-center">
-    <h1>Browse Movies</h1><br>
-    <div class="row">
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-    </div>
-</div><br>
 
-<div class="container-fluid bg-3 text-center">
-    <div class="row">
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-    </div>
-</div><br><br>
+              <label class="is-hidden" for="year">Any Year</label>
+              <input type="text" maxlength="4" name="year" id="year" placeholder="Year">
+
+        <button type="submit" id="submit" class="search-button"><i class="material-icons icn-search">search</i></button>
+      </form>   
+    </div>   
+  </div>
+
+  <div class="main-content clearfix">
+    <ul id="movies" class="movie-list">
+
+      <li class="desc centered">
+        <i class="material-icons icn-movie">movie</i>
+        Search movie titles and TV shows
+      </li>
+
+    </ul> 
+    <a href='/'><button>Back To Main Page</button></a>
+  </div>
+  <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+  <script src="../public/js/movie.js"></script>
+</body>
+</html>

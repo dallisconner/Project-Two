@@ -1,114 +1,92 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-
-let shuffledQuestions, currentQuestionIndex
-
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
-})
-
-function startGame() {
-  startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
-  questionContainerElement.classList.remove('hide')
-  setNextQuestion()
+function Quiz(questions) {
+  this.score = 0;
+  this.questions = questions;
+  this.questionIndex = 0;
 }
 
-function setNextQuestion() {
-  resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
+Quiz.prototype.getQuestionIndex = function() {
+  return this.questions[this.questionIndex];
 }
 
-function showQuestion(question) {
-  questionElement.innerText = question.question
-  question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
-    if (answer.correct) {
-      button.dataset.correct = answer.correct
-    }
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
-}
-
-function resetState() {
-  clearStatusClass(document.body)
-  nextButton.classList.add('hide')
-  while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+Quiz.prototype.guess = function(answer) {
+  if(this.getQuestionIndex().isCorrectAnswer(answer)) {
+      this.score++;
   }
+
+  this.questionIndex++;
 }
 
-function selectAnswer(e) {
-  const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
-  setStatusClass(document.body, correct)
-  Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
-  })
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide')
-  } else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+Quiz.prototype.isEnded = function() {
+  return this.questionIndex === this.questions.length;
+}
+
+
+function Question(text, choices, answer) {
+  this.text = text;
+  this.choices = choices;
+  this.answer = answer;
+}
+
+Question.prototype.isCorrectAnswer = function(choice) {
+  return this.answer === choice;
+}
+
+
+function populate() {
+  if(quiz.isEnded()) {
+      showScores();
   }
-}
+  else {
+      // show question
+      var element = document.getElementById("question");
+      element.innerHTML = quiz.getQuestionIndex().text;
 
-function setStatusClass(element, correct) {
-  clearStatusClass(element)
-  if (correct) {
-    element.classList.add('correct')
-  } else {
-    element.classList.add('wrong')
+      // show options
+      var choices = quiz.getQuestionIndex().choices;
+      for(var i = 0; i < choices.length; i++) {
+          var element = document.getElementById("choice" + i);
+          element.innerHTML = choices[i];
+          guess("btn" + i, choices[i]);
+      }
+
+      showProgress();
   }
-}
+};
 
-function clearStatusClass(element) {
-  element.classList.remove('correct')
-  element.classList.remove('wrong')
-}
+function guess(id, guess) {
+  var button = document.getElementById(id);
+  button.onclick = function() {
+      quiz.guess(guess);
+      populate();
+  }
+};
 
-const questions = [
-  {
-    question: 'Are you participating with kids or all adults?',
-    answers: [
-      { text: 'Kids included', correct: true },
-      { text: 'All adults', correct: true },
 
-    ]
-  },
-  {
-    question: 'What kind of candy do you prefer?',
-    answers: [
-      { text: 'Chocolate', correct: true },
-      { text: 'Fruity', correct: true },
-      { text: 'Sour', correct: true },
-      { text: 'I HATE candy' , correct: true }
-    ]
-  },
-  {
-    question: 'What type of scary movies do you prefer?',
-    answers: [
-      { text: 'Psychological', correct: true },
-      { text: 'Comedic', correct: true },
-      { text: 'Slasher', correct: true },
-      { text: 'Monster', correct: true }
-    ]
-  },
-  {
-    question: 'What kind of drinks do you want?',
-    answers: [
-      { text: 'Kid Friendly', correct: true },
-      { text: 'Adult Drinks', correct: true }
-    ]
-  },
-  
-]
+function showProgress() {
+  var currentQuestionNumber = quiz.questionIndex + 1;
+  var element = document.getElementById("progress");
+  element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+};
+
+function showScores() {
+  var gameOverHTML = "<h1>Result</h1>";
+  gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+  var element = document.getElementById("quiz");
+  element.innerHTML = gameOverHTML;
+};
+
+// create questions here
+var questions = [
+  new Question("Who is the main character of Nightmare on Elm Street?", ["Spongebob", "Michael Myers","Jason Voorhees", "Freddy Krueger"], "Freddy Krueger"),
+  new Question("Where is Transylvania Located?", ["South Africa", "Germany", "Romania", "Russia"], "Romania"),
+  new Question("How much did Americans spend on Halloween in 2019?", ["$5 Million", "$500 Million","$2.6 Billion", "$5 Billion"], "$2.6 Billion"),
+  new Question("What is the most commercially successful horror movie of all time?", ["It", "Halloween", "Texas Chainsaw Massacre", "Saw"], "It"),
+  new Question("In which country did Halloween originate?", ["Russia", "America", "Germany", "Ireland"], "Ireland")
+];
+
+// create quiz
+var quiz = new Quiz(questions);
+
+// display quiz
+populate();
+
