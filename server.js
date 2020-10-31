@@ -21,6 +21,10 @@ app.get('/about', function (req, res) {
   res.render('about')
 })
 
+app.get('/generate', function (req, res) {
+  res.sendFile(path.join(__dirname, './public/generateyournight.html'))
+})
+
 app.get('/browse', function (req, res) {
   res.render('browse')
 })
