@@ -1,6 +1,7 @@
 let express = require('express')
 let exphbs = require('express-handlebars')
 let path = require('path')
+const favoritesRoute = require('./controllers/favorites-route')
 const resultsRoutes = require('./controllers/results-routes')
 require('dotenv').config()
 let db = require('./models')
@@ -29,11 +30,12 @@ app.get('/quiz', function (req, res) {
   // res.render('quiz')
 })
 
-resultsRoutes(app)
-
 app.get('/', function (req, res) {
   res.render('index')
 })
+
+resultsRoutes(app)
+favoritesRoute(app)
 
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {

@@ -17,8 +17,7 @@ snack
 VARCHAR
     (100),
 movie_id
-VARCHAR
-    (100),
+INT,
     PRIMARY KEY
     (id)
 )
