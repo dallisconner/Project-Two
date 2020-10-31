@@ -1,93 +1,63 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: Gotham Rounded, sans-serif;
-}
-
-:root {
-  --hue-neutral: 200;
-  --hue-wrong: 0;
-  --hue-correct: 145;
-}
-
 body {
-  --hue: var(--hue-neutral);
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(var(--hue), 100%, 20%);
+  background-color: #413D3D;
 }
 
-body.correct {
-  --hue: var(--hue-correct);
+.grid {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px 50px 50px 50px;
+  border: 2px solid #cbcbcb;
+  
 }
 
-body.wrong {
-  --hue: var(--hue-wrong);
+.grid h1 {
+  font-family: "sans-serif";
+  background-color: #ff9901;
+  font-size: 60px;
+  text-align: center;
+  color: #000000;
+  padding: 2px 0px;
+  
 }
 
-.container {
-  width: 800px;
-  max-width: 80%;
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 10px 2px;
+#score {
+  color: #000000;
+  text-align: center;
+  font-size: 30px;
+}
+
+.grid #question {
+  font-family: "monospace";
+  font-size: 30px;
+  color: #000000;
+}
+
+.buttons {
   margin-top: 30px;
 }
 
-.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
-  margin: 20px 0;
+#btn0, #btn1, #btn2, #btn3 {
+  background-color: #ff9901;
+  width: 250px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #1D3C6A;
+  margin: 10px 40px 10px 0px;
+  padding: 10px 10px;
 }
 
-.btn {
-  --hue: var(--hue-neutral);
-  border: 1px solid hsl(var(--hue), 100%, 30%);
-  background-color: hsl(var(--hue), 100%, 50%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: white;
-  outline: none;
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+  cursor: pointer;
+  background-color: #ff0101;
 }
 
-.btn:hover {
-  border-color: black;
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+  outline: 0;
 }
 
-.btn.correct {
-  --hue: var(--hue-correct);
-  color: black;
-}
-
-.btn.wrong {
-  --hue: var(--hue-wrong);
-}
-
-.start-btn,
-.next-btn {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.main {
-  margin: 26px;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hide {
-  display: none;
+#progress {
+  color: #000000b6;
+  font-size: 18px;
 }
