@@ -1,9 +1,6 @@
-const express = require('express')
+var path = require('path')
 
-// *** import model database here (to use database functions) *** //
-
-// Requiring our models and passport as we've configured it
-const db = require('../models')
+// ROUTES ---------
 
 module.exports = function (app) {
   // gets home page
@@ -11,7 +8,15 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, '../public/index.html'))
   })
 
+  app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/about.handlebars'))
+  })
+
+  app.get('/browse', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/browse.handlebars'))
+  })
+
   app.get('/quiz', (req, res) => {
-    res.sendFile(path.join(__dirname, '../models/quiz.html'))
+    res.sendFile(path.join(__dirname, '../public/quiz.html'))
   })
 }
