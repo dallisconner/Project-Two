@@ -37,6 +37,9 @@ app.get('/results', function (req, res) {
 app.get('/', function (req, res) {
   res.render('index')
 })
+app.get('/candygenerator', function (req, res) {
+  res.render('candygenerator')
+})
 
 resultsRoutes(app)
 favoritesRoute(app)
