@@ -14,6 +14,7 @@ app.set('view engine', 'handlebars')
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '/public/')))
 app.use(express.static(path.join(__dirname, '/public/assets')))
+app.use(express.static(path.join(__dirname, '/public/js')))
 app.use(express.static(path.join(__dirname, '/models')))
 
 app.get('/about', function (req, res) {
@@ -27,6 +28,10 @@ app.get('/browse', function (req, res) {
 app.get('/quiz', function (req, res) {
   res.sendFile(path.join(__dirname, './public/quiz.html'))
   // res.render('quiz')
+})
+
+app.get('/results', function (req, res) {
+  res.render('results')
 })
 
 app.get('/', function (req, res) {
