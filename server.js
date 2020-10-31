@@ -1,16 +1,17 @@
 let express = require('express')
 let exphbs = require('express-handlebars')
 let path = require('path')
+const resultsRoutes = require('./controllers/results-routes')
 require('dotenv').config()
 let db = require('./models')
-
 let app = express()
 let PORT = process.env.PORT || 8080
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
-app.use(express.static(path.join(__dirname, '/public')))
+app.use(express.json())
+app.use(express.static(path.join(__dirname, '/public/')))
 app.use(express.static(path.join(__dirname, '/public/assets')))
 app.use(express.static(path.join(__dirname, '/public/js')))
 app.use(express.static(path.join(__dirname, '/models')))
@@ -28,9 +29,7 @@ app.get('/quiz', function (req, res) {
   // res.render('quiz')
 })
 
-app.get('/results', function (req, res) {
-  res.render('results')
-})
+resultsRoutes(app)
 
 app.get('/', function (req, res) {
   res.render('index')
