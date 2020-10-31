@@ -52,9 +52,7 @@
     z-index: 2000;
   }
   
-  /* ================================= 
-    Page Components
-  ==================================== */
+  
   
   .main-title {
     font-size: 1.4em;
@@ -95,7 +93,7 @@
     display: block;
   }
   
-  /* MOVIE LIST COMPONENTS -------- */
+  
   
   .no-movies,
   .desc  {
@@ -146,9 +144,7 @@
     margin: auto;
   }
   
-  /* ================================= 
-    Layout Styles
-  ==================================== */
+ 
   
   .inner,
   .main-content {
@@ -167,9 +163,7 @@
     z-index: 1000;
   }
   
-  /* ================================= 
-    Helper Classes
-  ==================================== */
+ 
   
   .clearfix::after {
     content: " ";
@@ -188,9 +182,7 @@
     width: 1px;
   }
   
-  /* ================================= 
-    Media Queries
-  ==================================== */
+  
   
   @media (min-width: 0) and (max-width: 549px) {
     .movie-list li {
