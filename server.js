@@ -30,6 +30,10 @@ app.get('/quiz', function (req, res) {
   // res.render('quiz')
 })
 
+app.get('/results', function (req, res) {
+  res.render('results')
+})
+
 app.get('/', function (req, res) {
   res.render('index')
 })

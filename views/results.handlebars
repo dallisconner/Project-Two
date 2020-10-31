@@ -16,7 +16,7 @@
         <li><a href="/quiz">Take Quiz</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"> <span class="glyphicon glyphicon-user"></span> User</a></li>
+        <li><a href="/results"> <span class="glyphicon glyphicon-user"></span> User</a></li>
       </ul>
     </div>
   </div>
@@ -26,14 +26,17 @@
   <div class="container text-center">
     <br><br><br><br>
     <h1>Results</h1>
-    <h2>Your Movie Night"</h2>
-    <ul>
-        <li>Movie</li>
+    <h2>Your Movie Night:</h2>
+        <h3>Movie</h3>
+        <p>{{movie}}</p>
         <br>
-        <li>Candy</li>
+        <h3>Candy</h3>
+        <p>{{candy}}</p>
         <br>
-        <li>Drink</li>
-    </ul>
-    <br><br><br><br>
+        <h3>Drink</h3>
+        <p>{{drink}}</p>
+    <br><br>
+    <button class="btn btn-warning btn-lg save"><span class="glyphicon glyphicon-save"></span>Save</button>
+    <br><br>
   </div>
 </div>
