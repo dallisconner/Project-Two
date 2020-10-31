@@ -1,0 +1,45 @@
+nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/about">Halloween Movie Night!</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/browse">Browse</a></li>
+        <li class="active"><a href="/quiz">Take Quiz</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+           <link rel="stylesheet" href="../public/assets/css/generateyournight.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Candy Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate Random Candy</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="candy"
+            placeholder="Your Random Candy"
+            aria-label="Generated Candy"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Candy!</button>
+        </div>
+      </div>
+    </div>
+    <script src="../public/js/generateyournight.js"></script>
+  </body>
+</html>
