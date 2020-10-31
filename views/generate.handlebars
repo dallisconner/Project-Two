@@ -10,9 +10,7 @@
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/quiz.css">
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
@@ -32,42 +30,35 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
-                <li class="active"><a href="/browse">Browse</a></li>
-                <li><a href="/">Generate Your Night</a></li>
+                <li><a href="/browse">Browse</a></li>
+                <li class="active"><a href="/generate">Generate Your Night</a></li>
                 <li><a href="/quiz">Take Quiz</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-
                 <li><a href="#">Favorites</a></li>
-
             </ul>
         </div>
         </div>
     </nav>
-    <div class="grid">
-        <div id="quiz">
-            <h1>Halloween Quiz!</h1>
-            <hr style="margin-bottom: 20px">
-
-            <p id="question"></p>
-
-            <div class="buttons">
-                <button id="btn0"><span id="choice0"></span></button>
-                <button id="btn1"><span id="choice1"></span></button>
-                <button id="btn2"><span id="choice2"></span></button>
-                <button id="btn3"><span id="choice3"></span></button>
+    <div class="wrapper">
+        <header>
+            <h1>Candy Generator</h1>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <h2>Generate Random Candy</h2>
             </div>
-
-            <hr style="margin-top: 50px">
-            <footer>
-                <p id="progress">Question x of y</p>
-            </footer>
+            <div class="card-body">
+                <textarea readonly id="candy" placeholder="Your Random Candy" aria-label="Generated Candy"></textarea>
+            </div>
+            <div class="card-footer">
+                <button id="generate" class="btn">Generate Candy!</button>
+            </div>
+            <a href='/'><button>Back To Main Page</button></a>
         </div>
     </div>
 
-
-    <script src="./js/quiz.js"></script>
-
+    <script src="../public/js/generateyournight.js"></script>
 </body>
 
 </html>

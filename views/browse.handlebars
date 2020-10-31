@@ -1,56 +1,65 @@
 <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/about">Halloween Movie Night!</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li class="active"><a href="/browse">Browse</a></li>
-                <li><a href="/quiz">Take Quiz</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/results"> <span class="glyphicon glyphicon-user"></a></span> User</li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/about">Halloween Movie Night!</a>
     </div>
+
+
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li class="active"><a href="/browse">Browse</a></li>
+      <li><a href="/">Generate Your Night</a></li>
+      <li><a href="/quiz">Take Quiz</a></li>
+
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+
+      <li><a href="#">Favorites</a></li>
+
+    </ul>
+  </div>
+  </div>
+</nav>
+
 <div class="main-header">
-    <div class="inner">
-      <h1 class="main-title">Have some ideas for movies? Search them up here!</h1>
-      <form class="search-form">
-        <label class="is-hidden" for="search">Search a title</label>
-        <input type="search" name="search" id="search" placeholder="Search a Title...">
+  <div class="inner">
+    <h1 class="main-title">Have some ideas for movies? Search them up here!</h1>
+    <form class="search-form">
+      <label class="is-hidden" for="search">Search a title</label>
+      <input type="search" name="search" id="search" placeholder="Search a Title...">
 
 
-              <label class="is-hidden" for="year">Any Year</label>
-              <input type="text" maxlength="4" name="year" id="year" placeholder="Year">
+      <label class="is-hidden" for="year">Any Year</label>
+      <input type="text" maxlength="4" name="year" id="year" placeholder="Year">
 
-        <button type="submit" id="submit" class="search-button"><i class="material-icons icn-search">search</i></button>
-      </form>   
-    </div>   
+      <button type="submit" id="submit" class="search-button"><i class="material-icons icn-search">Search</i></button>
+    </form>
   </div>
+</div>
 
-  <div class="main-content clearfix">
-    <ul id="movies" class="movie-list">
+<div class="main-content clearfix">
+  <ul id="movies" class="movie-list">
 
-      <li class="desc centered">
-        <i class="material-icons icn-movie">movie</i>
-        Search movie titles and TV shows
-      </li>
+    <li class="desc centered">
+      <i class="material-icons icn-movie">movie</i>
+      Search movie titles and TV shows
+    </li>
 
-    </ul> 
-    <a href='/'><button>Back To Main Page</button></a>
-  </div>
-  <script
-          src="https://code.jquery.com/jquery-3.1.1.min.js"
-          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-          crossorigin="anonymous"></script>
-  <script src="../public/js/movie.js"></script>
+  </ul>
+  <a href='/'><button>Back To Main Page</button></a>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="../public/js/movie.js"></script>
 </body>
+
 </html>
